@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from posts.views import posts_index
 from posts.views import news_city
+from posts.views import city
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', posts_index),
     path('news/',news_city),
+    path('city/',city)
+
 
 ]

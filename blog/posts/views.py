@@ -16,6 +16,10 @@ def news_city(request):
    logger.info(value)
    return HttpResponse('NEWS MY CITY')
 
+def city(request):
+   value = request.POST.get("city")
+   logger.info(value)
+   return HttpResponse('CITY')
 
 
 # Create your views here.
