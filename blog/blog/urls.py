@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from posts.views import posts_index
 from homework.views import homework
-
+from blog.views import register
 
 
 
@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', posts_index),
     path('homework/', homework),
+    path('register/', register),
 ]
 
 if settings.DEBUG:

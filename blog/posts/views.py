@@ -10,8 +10,3 @@ def posts_index(request):
    logger.info(value)
    return HttpResponse("Posts index view")
 
-
-
-
-
-# Create your views here.
