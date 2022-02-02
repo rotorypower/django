@@ -9,4 +9,6 @@ class PostAdmin(admin.ModelAdmin):
    fields = ("author", "title", "image", "slug", "text", "created_at")
    readonly_fields = ("created_at",)
    search_fields = ("title", "slug", "text")
-# Register your models here.
+
+
+

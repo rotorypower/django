@@ -1,12 +1,11 @@
-from django.http import HttpResponse
 import logging
 from django.http import HttpResponse
+
+from posts.models import Post
 
 logger = logging.getLogger(__name__)
 
 
 def posts_index(request):
-   value = request.GET.get("key")
-   logger.info(value)
-   return HttpResponse("Posts index view")
-
+   posts = Post.objects.all()
+   return HttpResponse([', '.join([x.slug for x in posts])])
