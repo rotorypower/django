@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from posts.views import posts_index
 from homework.views import homework
 from blog.views import register
+
 
 
 
@@ -27,6 +28,7 @@ urlpatterns = [
     path('', posts_index),
     path('homework/', homework),
     path('register/', register),
+    path("api/", include("api.urls", namespace="api")),
 ]
 
 if settings.DEBUG:
