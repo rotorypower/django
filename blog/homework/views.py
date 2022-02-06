@@ -1,6 +1,16 @@
+import logging
+
 from django.http import HttpResponse
 
-def homework(request):
+logger = logging.getLogger(__name__)
+
+def homework_index(request):
+    value = request.GET.get('get-key-1')
+    value and logger.info(f'get-key-1 = {value}')
+
+    value = request.POST.get('post-key-1')
+    value and logger.info(f'post-key-1 = {value}')
+
     return HttpResponse('HOMEWORK')
 
-# Create your views here.
+

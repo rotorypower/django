@@ -17,7 +17,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from posts.views import posts_index
-from homework.views import homework
+from homework.views import homework_index
 from blog.views import register
 
 
@@ -25,8 +25,8 @@ from blog.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', posts_index),
-    path('homework/', homework),
+    path('', posts_index, name="home"),
+    path('homework/', homework_index, name="homework_index"),
     path('register/', register),
     path("api/", include("api.urls", namespace="api")),
 ]

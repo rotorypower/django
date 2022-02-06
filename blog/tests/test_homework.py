@@ -2,7 +2,7 @@ from django.test import Client
 
 
 class TestProfiles:
-    def test_profiles_index_view(self):
+    def test_homework_index_view(self):
         client = Client()
 
         response = client.get("/homework/")
