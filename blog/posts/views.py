@@ -8,4 +8,4 @@ logger = logging.getLogger(__name__)
 
 def posts_index(request):
    posts = Post.objects.all()
-   return HttpResponse([', '.join([x.slug for x in posts])])
+   return HttpResponse([', '.join([x.title for x in posts])])

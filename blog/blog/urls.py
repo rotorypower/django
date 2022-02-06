@@ -21,8 +21,6 @@ from homework.views import homework_index
 from blog.views import register
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', posts_index, name="home"),
