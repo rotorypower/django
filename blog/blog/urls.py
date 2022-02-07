@@ -19,14 +19,16 @@ from django.urls import path, include
 from posts.views import posts_index
 from homework.views import homework_index
 from blog.views import register
+from shop.views import product_list
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', posts_index, name="home"),
-    path('homework/', homework_index, name="homework_index"),
+    path('', posts_index, name='home'),
+    path('products/', product_list, name='product_list'),
+    path('homework/', homework_index, name='homework_index'),
     path('register/', register),
-    path("api/", include("api.urls", namespace="api")),
+    path('api/', include('api.urls', namespace='api')),
 ]
 
 if settings.DEBUG:
